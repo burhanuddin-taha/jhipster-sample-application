@@ -1,0 +1,115 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="entities">
+            <h2><span>Entities</span> {{entities.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Company</span></dt>
+                <dd>
+                    <span>{{entities.company}}</span>
+                </dd>
+                <dt><span>Country Code</span></dt>
+                <dd>
+                    <span>{{entities.countryCode}}</span>
+                </dd>
+                <dt><span>State</span></dt>
+                <dd>
+                    <span>{{entities.state}}</span>
+                </dd>
+                <dt><span>City</span></dt>
+                <dd>
+                    <span>{{entities.city}}</span>
+                </dd>
+                <dt><span>Zip Code</span></dt>
+                <dd>
+                    <span>{{entities.zipCode}}</span>
+                </dd>
+                <dt><span>Vat Number</span></dt>
+                <dd>
+                    <span>{{entities.vatNumber}}</span>
+                </dd>
+                <dt><span>Cf</span></dt>
+                <dd>
+                    <span>{{entities.cf}}</span>
+                </dd>
+                <dt><span>Sdi</span></dt>
+                <dd>
+                    <span>{{entities.sdi}}</span>
+                </dd>
+                <dt><span>Owned By</span></dt>
+                <dd>
+                    <span>{{entities.ownedBy}}</span>
+                </dd>
+                <dt><span>Geolocation</span></dt>
+                <dd>
+                    <span>{{entities.geolocation}}</span>
+                </dd>
+                <dt><span>Origin User Id</span></dt>
+                <dd>
+                    <span>{{entities.originUserId}}</span>
+                </dd>
+                <dt><span>Registration</span></dt>
+                <dd>
+                    <span>{{entities.registration}}</span>
+                </dd>
+                <dt><span>Code</span></dt>
+                <dd>
+                    <span>{{entities.code}}</span>
+                </dd>
+                <dt><span>Pec</span></dt>
+                <dd>
+                    <span>{{entities.pec}}</span>
+                </dd>
+                <dt><span>Num Rivendita</span></dt>
+                <dd>
+                    <span>{{entities.numRivendita}}</span>
+                </dd>
+                <dt><span>Website</span></dt>
+                <dd>
+                    <span>{{entities.website}}</span>
+                </dd>
+                <dt><span>Fax</span></dt>
+                <dd>
+                    <span>{{entities.fax}}</span>
+                </dd>
+                <dt><span>Profile</span></dt>
+                <dd>
+                    <span>{{entities.profile}}</span>
+                </dd>
+                <dt><span>Bank Name</span></dt>
+                <dd>
+                    <span>{{entities.bankName}}</span>
+                </dd>
+                <dt><span>Bank Iban</span></dt>
+                <dd>
+                    <span>{{entities.bankIban}}</span>
+                </dd>
+                <dt><span>Ranking</span></dt>
+                <dd>
+                    <span>{{entities.ranking}}</span>
+                </dd>
+                <dt><span>Business String</span></dt>
+                <dd>
+                    <span>{{entities.businessString}}</span>
+                </dd>
+                <dt><span>Origin</span></dt>
+                <dd>
+                    <span>{{entities.origin}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/entities', entities.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

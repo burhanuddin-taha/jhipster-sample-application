@@ -1,0 +1,128 @@
+{
+    "name": "Entities",
+    "fields": [
+        {
+            "fieldName": "company",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countryCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zipCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vatNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cf",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sdi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ownedBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "geolocation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "originUserId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "registration",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pec",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numRivendita",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "website",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fax",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "profile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankIban",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ranking",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "businessString",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "origin",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "entityStructure",
+            "otherEntityRelationshipName": "belongTo",
+            "relationshipName": "entityStructure"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "businessType",
+            "otherEntityRelationshipName": "entities",
+            "relationshipName": "type",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "entityAttributes",
+            "otherEntityRelationshipName": "entities",
+            "relationshipName": "attributes"
+        }
+    ],
+    "changelogDate": "20191107205954",
+    "entityTableName": "entities",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

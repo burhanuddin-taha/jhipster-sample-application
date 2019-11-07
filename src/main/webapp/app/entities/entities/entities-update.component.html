@@ -1,0 +1,139 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-entities-heading">Create or edit a Entities</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_company">Company</label>
+                    <input type="text" class="form-control" name="company" id="field_company"
+                           formControlName="company"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_countryCode">Country Code</label>
+                    <input type="text" class="form-control" name="countryCode" id="field_countryCode"
+                           formControlName="countryCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_state">State</label>
+                    <input type="text" class="form-control" name="state" id="field_state"
+                           formControlName="state"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_city">City</label>
+                    <input type="text" class="form-control" name="city" id="field_city"
+                           formControlName="city"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_zipCode">Zip Code</label>
+                    <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                           formControlName="zipCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_vatNumber">Vat Number</label>
+                    <input type="text" class="form-control" name="vatNumber" id="field_vatNumber"
+                           formControlName="vatNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cf">Cf</label>
+                    <input type="text" class="form-control" name="cf" id="field_cf"
+                           formControlName="cf"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_sdi">Sdi</label>
+                    <input type="text" class="form-control" name="sdi" id="field_sdi"
+                           formControlName="sdi"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_ownedBy">Owned By</label>
+                    <input type="number" class="form-control" name="ownedBy" id="field_ownedBy"
+                           formControlName="ownedBy"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_geolocation">Geolocation</label>
+                    <input type="text" class="form-control" name="geolocation" id="field_geolocation"
+                           formControlName="geolocation"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_originUserId">Origin User Id</label>
+                    <input type="number" class="form-control" name="originUserId" id="field_originUserId"
+                           formControlName="originUserId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_registration">Registration</label>
+                    <input type="text" class="form-control" name="registration" id="field_registration"
+                           formControlName="registration"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_code">Code</label>
+                    <input type="text" class="form-control" name="code" id="field_code"
+                           formControlName="code"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_pec">Pec</label>
+                    <input type="text" class="form-control" name="pec" id="field_pec"
+                           formControlName="pec"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_numRivendita">Num Rivendita</label>
+                    <input type="text" class="form-control" name="numRivendita" id="field_numRivendita"
+                           formControlName="numRivendita"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_website">Website</label>
+                    <input type="text" class="form-control" name="website" id="field_website"
+                           formControlName="website"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fax">Fax</label>
+                    <input type="text" class="form-control" name="fax" id="field_fax"
+                           formControlName="fax"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_profile">Profile</label>
+                    <input type="text" class="form-control" name="profile" id="field_profile"
+                           formControlName="profile"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_bankName">Bank Name</label>
+                    <input type="text" class="form-control" name="bankName" id="field_bankName"
+                           formControlName="bankName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_bankIban">Bank Iban</label>
+                    <input type="text" class="form-control" name="bankIban" id="field_bankIban"
+                           formControlName="bankIban"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_ranking">Ranking</label>
+                    <input type="number" class="form-control" name="ranking" id="field_ranking"
+                           formControlName="ranking"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_businessString">Business String</label>
+                    <input type="text" class="form-control" name="businessString" id="field_businessString"
+                           formControlName="businessString"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_origin">Origin</label>
+                    <input type="text" class="form-control" name="origin" id="field_origin"
+                           formControlName="origin"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
