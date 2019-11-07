@@ -1,0 +1,102 @@
+<div>
+    <h2 id="page-heading">
+        <span>Entities</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-entities" [routerLink]="['/entities/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create a new Entities
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="entities?.length === 0">
+        <span>No entities found</span>
+    </div>
+    <div class="table-responsive" *ngIf="entities?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th scope="col" ><span>ID</span></th>
+            <th scope="col" ><span>Company</span></th>
+            <th scope="col" ><span>Country Code</span></th>
+            <th scope="col" ><span>State</span></th>
+            <th scope="col" ><span>City</span></th>
+            <th scope="col" ><span>Zip Code</span></th>
+            <th scope="col" ><span>Vat Number</span></th>
+            <th scope="col" ><span>Cf</span></th>
+            <th scope="col" ><span>Sdi</span></th>
+            <th scope="col" ><span>Owned By</span></th>
+            <th scope="col" ><span>Geolocation</span></th>
+            <th scope="col" ><span>Origin User Id</span></th>
+            <th scope="col" ><span>Registration</span></th>
+            <th scope="col" ><span>Code</span></th>
+            <th scope="col" ><span>Pec</span></th>
+            <th scope="col" ><span>Num Rivendita</span></th>
+            <th scope="col" ><span>Website</span></th>
+            <th scope="col" ><span>Fax</span></th>
+            <th scope="col" ><span>Profile</span></th>
+            <th scope="col" ><span>Bank Name</span></th>
+            <th scope="col" ><span>Bank Iban</span></th>
+            <th scope="col" ><span>Ranking</span></th>
+            <th scope="col" ><span>Business</span></th>
+            <th scope="col" ><span>Origin</span></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let entities of entities ;trackBy: trackId">
+                <td><a [routerLink]="['/entities', entities.id, 'view' ]">{{entities.id}}</a></td>
+                <td>{{entities.company}}</td>
+                <td>{{entities.countryCode}}</td>
+                <td>{{entities.state}}</td>
+                <td>{{entities.city}}</td>
+                <td>{{entities.zipCode}}</td>
+                <td>{{entities.vatNumber}}</td>
+                <td>{{entities.cf}}</td>
+                <td>{{entities.sdi}}</td>
+                <td>{{entities.ownedBy}}</td>
+                <td>{{entities.geolocation}}</td>
+                <td>{{entities.originUserId}}</td>
+                <td>{{entities.registration}}</td>
+                <td>{{entities.code}}</td>
+                <td>{{entities.pec}}</td>
+                <td>{{entities.numRivendita}}</td>
+                <td>{{entities.website}}</td>
+                <td>{{entities.fax}}</td>
+                <td>{{entities.profile}}</td>
+                <td>{{entities.bankName}}</td>
+                <td>{{entities.bankIban}}</td>
+                <td>{{entities.ranking}}</td>
+                <td>{{entities.business}}</td>
+                <td>{{entities.origin}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/entities', entities.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/entities', entities.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/entities', { outlets: { popup: entities.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
