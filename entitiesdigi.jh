@@ -1,0 +1,61 @@
+
+entity Entities {
+	
+	company String,
+	countryCode String,
+    state String,
+    city String,
+    zipCode String,
+	vatNumber String,
+    cf String,
+    sdi String,
+	ownedBy Long,
+    state String,
+    city String,
+    zipCode String,
+	vatNumber String,
+    cf String,
+    geolocation String,
+    originUserId Long,
+    registration String,
+    code String,
+    pec String,
+    numRivendita String,
+    website String,
+    fax String,
+    profile String,
+    bankName String,
+    bankIban String,
+    ranking Integer,
+    business String,//drived from BusinessType
+    origin String
+}
+
+entity EntityAttributes{
+	categotyName String
+}
+
+entity EntityAuthority{
+ userId Integer,
+ entityId Integer
+ entityName String,
+}
+
+entity BusinessType {
+		type String
+    }
+
+entity EntityStructure {
+ category String,
+ capacity Long,
+}
+
+relationship ManyToOne {
+  EntityAttributes{entityId} to Entities{attributes}
+}
+relationship ManyToOne {
+  EntityStructure{entityId} to Entities{id}
+}
+
+dto * with mapstruct
+service all with serviceImpl
