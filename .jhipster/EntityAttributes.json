@@ -1,0 +1,28 @@
+{
+    "name": "EntityAttributes",
+    "fields": [
+        {
+            "fieldName": "categotyName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "entities",
+            "otherEntityRelationshipName": "attributes",
+            "relationshipName": "entityId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107224100",
+    "entityTableName": "entity_attributes",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
