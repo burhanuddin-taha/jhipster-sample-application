@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="entityAttributes">
+            <h2><span>Entity Attributes</span> {{entityAttributes.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Categoty Name</span></dt>
+                <dd>
+                    <span>{{entityAttributes.categotyName}}</span>
+                </dd>
+                <dt><span>Entities</span></dt>
+                <dd>
+                    <div *ngIf="entityAttributes.entitiesId">
+                        <a [routerLink]="['/entities', entityAttributes.entitiesId, 'view']">{{entityAttributes.entitiesId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/entity-attributes', entityAttributes.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="entityStructure">
+            <h2><span>Entity Structure</span> {{entityStructure.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Category</span></dt>
+                <dd>
+                    <span>{{entityStructure.category}}</span>
+                </dd>
+                <dt><span>Capacity</span></dt>
+                <dd>
+                    <span>{{entityStructure.capacity}}</span>
+                </dd>
+                <dt><span>Belong To</span></dt>
+                <dd>
+                    <div *ngIf="entityStructure.belongToId">
+                        <a [routerLink]="['/entities', entityStructure.belongToId, 'view']">{{entityStructure.belongToId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/entity-structure', entityStructure.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
