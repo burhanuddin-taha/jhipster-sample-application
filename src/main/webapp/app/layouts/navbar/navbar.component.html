@@ -27,6 +27,36 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">
+                    <li>
+                        <a class="dropdown-item" routerLink="entities" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
+                            <span>Entities</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="entity-attributes" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
+                            <span>Entity Attributes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="entity-authority" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
+                            <span>Entity Authority</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="business-type" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
+                            <span>Business Type</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="entity-structure" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
+                            <span>Entity Structure</span>
+                        </a>
+                    </li>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </ul>
             </li>
