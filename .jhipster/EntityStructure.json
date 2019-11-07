@@ -1,0 +1,32 @@
+{
+    "name": "EntityStructure",
+    "fields": [
+        {
+            "fieldName": "category",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "capacity",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "entities",
+            "otherEntityRelationshipName": "structure",
+            "relationshipName": "entityId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107224103",
+    "entityTableName": "entity_structure",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
